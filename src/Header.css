@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  max-width: 1370px;
+  margin: auto;
+  /* padding: 10px; */
+  display: flex;
+  height: 100%;
+}
+.main-header{
+    height: 70px;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    top: 0;
+}
+.main-header button{
+    height: 30px;
+    width: 200px;
+    background-color: green;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+
+}
+.main-header button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.main-header h1{
+    margin-top: 10px;
+    margin-left: 30px;
+    color: red
+    ;
+}
+.main-header input{
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    margin-top: 19px;
+    margin-right: 100px;
+}
