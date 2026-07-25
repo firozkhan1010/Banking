@@ -1,4 +1,7 @@
-
+.container{
+  display: flex;
+  min-height: 100vh;
+}
 .left {
   width: 50%;
   height: 89%;
@@ -6,10 +9,13 @@
   flex-direction: column;
   padding-top: 70px;
   align-items: center;
+  flex: 1;
 }
 .right {
   width: 50%;
   height: 100%;
+  z-index: 1;
+  flex: 1;
 }
 .img-text {
   position: absolute;
@@ -74,4 +80,23 @@
   outline: none;
   height: 32px;
   background: transparent;
+}
+@media (max-width : 768px){
+  .conyainer{
+    flex-direction: column;
+  }
+  .left{
+    height: 250px;
+  }
+  .right{
+    padding: 20px;
+
+  }
+  .login-card{
+    width: 100%;
+    max-width: 100%;
+  }
+  h1{
+    font-size: 20px;
+  }
 }
