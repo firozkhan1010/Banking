@@ -74,7 +74,7 @@ function Components({ searchData, ShowSignUp }) {
       {ShowSignUp ? (
         <CreateAccount />
       ) : (
-        <div className="container">
+        <div>
           
           <div className="main-dash">
              <div className="right2">
