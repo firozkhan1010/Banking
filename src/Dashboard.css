@@ -1,89 +1,231 @@
+/* ===========================
+   MAIN CONTAINER
+=========================== */
 
 .main-dash{
-    width: 1290px;
-    height: 100%;
-    margin-top: 2px;
+    width: 100%;
+    max-width: 1290px;
+    margin: 2px auto;
+    padding: 15px;
+    box-sizing: border-box;
 }
+
+/* ===========================
+   TOP BUTTON SECTION
+=========================== */
+
 .right2{
-   width: 100%;
-   border: 1px solid black;
-   padding: 20px;
-   display: flex;
-   align-items: center;
-   gap: 40px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
-.left2{
-   width: 100%;
-   border: 1px solid black;
-   height: 100%;
-   padding: 20px;
+
+.right2 h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
 .right2 button{
     display: flex;
     justify-content: center;
     align-items: center;
     height:50px;
-    width: 200px;
+    width:200px;
     background-color: rgb(72, 158, 192);
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    color:white ;
-    font-weight: 500;
-    font-size: 20px;
-    cursor: pointer;
+    border:none;
+    outline:none;
+    border-radius:6px;
+    color:white;
+    font-weight:500;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
 }
+
 .right2 button:hover{
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    background:white;
+    color:black;
+    border:2px solid black;
 }
-.tablebd td{
-    font-size: 20px;
-    font-weight: 500;
-    text-align: left;
-     text-transform: capitalize;
+
+/* ===========================
+   TABLE SECTION
+=========================== */
+
+.left2{
+    width:100%;
+    border:1px solid black;
+    padding:20px;
+    margin-top:20px;
+    overflow-x:auto;
+    box-sizing:border-box;
 }
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:900px;
+}
+
 .tablehd th{
-    font-weight: 900;
-    color: rgb(172, 14, 14);
-    font-size: 20px;
-    text-align: center;
+    font-weight:900;
+    color:rgb(172,14,14);
+    font-size:20px;
+    text-align:center;
+    padding:10px;
 }
+
+.tablebd td{
+    font-size:18px;
+    font-weight:500;
+    text-align:center;
+    padding:10px;
+    text-transform:capitalize;
+}
+
 .tablebd tr td button{
-    background-color: transparent;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    background-color:#e60505;
-    height: 30px;
-    width: 100%;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
+    background:#e60505;
+    border:none;
+    height:35px;
+    width:100%;
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s;
 }
+
 .tablebd tr td button:hover{
-    background-color: white;
-    color: black;
+    background:white;
+    color:black;
+    border:1px solid black;
 }
+
 .editbtn{
-  
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    background-color: #1ff2a8;
-    height: 30px;
-    width: 60px;
-    color: darkred;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#1ff2a8;
+    height:35px;
+    width:70px;
+    color:darkred;
+    font-weight:500;
+    cursor:pointer;
+    font-size:18px;
+    margin:auto;
+    transition:.3s;
 }
+
 .editbtn:hover{
-    background-color: white;
-    color: black;
+    background:white;
+    color:black;
+    border:1px solid black;
+}
+
+/* ===========================
+   TABLE BORDER
+=========================== */
+
+table,
+th,
+td{
+    border:1px solid black;
+}
+
+/* ===========================
+   TABLET (992px)
+=========================== */
+
+@media (max-width:992px){
+
+    .right2{
+        gap:15px;
+    }
+
+    .right2 button{
+        width:180px;
+        font-size:18px;
+    }
+
+    .tablehd th,
+    .tablebd td{
+        font-size:16px;
+    }
+}
+
+/* ===========================
+   MOBILE (768px)
+=========================== */
+
+@media (max-width:768px){
+
+    .main-dash{
+        padding:10px;
+    }
+
+    .right2{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .right2 h2{
+        font-size:22px;
+    }
+
+    .right2 button{
+        width:100%;
+        max-width:350px;
+        font-size:18px;
+    }
+
+    .left2{
+        padding:10px;
+    }
+
+    table{
+        min-width:850px;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE (480px)
+=========================== */
+
+@media (max-width:480px){
+
+    .right2{
+        padding:15px;
+    }
+
+    .right2 h2{
+        font-size:20px;
+    }
+
+    .right2 button{
+        height:45px;
+        font-size:16px;
+    }
+
+    .tablehd th,
+    .tablebd td{
+        font-size:14px;
+        padding:8px;
+    }
+
+    .editbtn{
+        width:60px;
+        height:30px;
+        font-size:15px;
+    }
+
+    .tablebd tr td button{
+        height:30px;
+        font-size:14px;
+    }
 }
