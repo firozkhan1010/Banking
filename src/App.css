@@ -1,102 +1,243 @@
-.container{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= Container ================= */
+
+.container {
   display: flex;
   min-height: 100vh;
+  width: 100%;
 }
+
+/* ================= Left ================= */
+
 .left {
-  width: 50%;
-  height: 89%;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 70px;
-  align-items: center;
-  flex: 1;
+  justify-content: center;
+  padding: 40px;
 }
-.right {
-  width: 50%;
-  height: 100%;
-  z-index: 1;
-  flex: 1;
-}
-.img-text {
-  position: absolute;
-  top: 280px;
-  left: 30px;
-  color: white;
-}
-.child-div {
-  height: 460px;
-  width: 500px;
-  box-shadow: -1px -1px 10px gray;
-  border-radius: 10px;
-  align-items: start;
-  padding-left: 40px;
-}
+
 .left h1 {
   color: red;
+  margin-bottom: 20px;
+  text-align: center;
 }
-.child-div input {
-  height: 30px;
-  width: 450px;
-  border: none;
-  box-shadow: -1px -1px 10px black;
-  padding-left: 20px;
-  margin-top: 10px;
-  outline: none;
-  /* border-radius: 4px; */
+
+/* ================= Right ================= */
+
+.right {
+  flex: 1;
+  position: relative;
 }
-.requirePera {
-  display: flex;
-  gap: 190px;
+
+.right img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
-.subbtn {
-  height: 40px;
-  width: 470px;
-  background-color: rgb(230, 89, 38);
-  border: none;
+
+/* ================= Image Text ================= */
+
+.img-text {
+  position: absolute;
+  left: 40px;
+  bottom: 60px;
   color: white;
-  font-size: 15px;
-  font-weight: 600;
-  margin-top: 30px;
-  border-radius: 5px;
-  margin-top: 50px;
-  outline: none;
 }
+
+.img-text h1 {
+  margin-bottom: 10px;
+}
+
+.img-text p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ================= Login Card ================= */
+
+.child-div {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: -1px -1px 10px gray;
+  background: white;
+}
+
+.child-div h2 {
+  margin-bottom: 20px;
+}
+
+.child-div label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* ================= Inputs ================= */
+
+.child-div input {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= Password Box ================= */
+
+.BtnShow {
+  display: flex;
+  margin-top: 8px;
+}
+
+.BtnShow input {
+  flex: 1;
+  margin-top: 0;
+}
+
+.BtnShow button {
+  width: 55px;
+  border: none;
+  background: white;
+  box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* ================= Login Button ================= */
+
+.subbtn {
+  width: 100%;
+  height: 45px;
+  margin-top: 35px;
+  background: rgb(230, 89, 38);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.subbtn:hover {
+  background: rgb(210, 75, 25);
+}
+
 .forpera {
   color: gray;
 }
-.eye-icon {
-  position: absolute;
-  left: 1220px;
-  top: 362px;
-  cursor: pointer;
+
+.requirePera {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
-.BtnShow input {
-  width: 380px;
-}
-.BtnShow button {
-  width: 65px;
-  border: none;
-  box-shadow: -1px -1px 10px black;
-  outline: none;
-  height: 32px;
-  background: transparent;
-}
-@media (max-width : 768px){
-  .conyainer{
+
+/* ================= Tablet ================= */
+
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
   }
-  .left{
-    height: 250px;
-  }
-  .right{
-    padding: 20px;
 
-  }
-  .login-card{
+  .right {
     width: 100%;
-    max-width: 100%;
+    height: 300px;
   }
-  h1{
+
+  .right img {
+    height: 300px;
+  }
+
+  .img-text {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .img-text h1 {
+    font-size: 24px;
+  }
+
+  .img-text p {
+    font-size: 14px;
+  }
+
+  .left {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left h1 {
+    font-size: 28px;
+  }
+
+  .child-div {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .requirePera {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 480px) {
+  .left {
+    padding: 15px;
+  }
+
+  .left h1 {
+    font-size: 22px;
+  }
+
+  .img-text {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .img-text h1 {
     font-size: 20px;
+  }
+
+  .img-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .child-div {
+    padding: 15px;
+  }
+
+  .child-div h2 {
+    font-size: 20px;
+  }
+
+  .child-div label {
+    font-size: 14px;
+  }
+
+  .child-div input {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .BtnShow button {
+    width: 50px;
+  }
+
+  .subbtn {
+    height: 42px;
+    font-size: 15px;
   }
 }
