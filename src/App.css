@@ -1,0 +1,77 @@
+
+.left {
+  width: 50%;
+  height: 89%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  align-items: center;
+}
+.right {
+  width: 50%;
+  height: 100%;
+}
+.img-text {
+  position: absolute;
+  top: 280px;
+  left: 30px;
+  color: white;
+}
+.child-div {
+  height: 460px;
+  width: 500px;
+  box-shadow: -1px -1px 10px gray;
+  border-radius: 10px;
+  align-items: start;
+  padding-left: 40px;
+}
+.left h1 {
+  color: red;
+}
+.child-div input {
+  height: 30px;
+  width: 450px;
+  border: none;
+  box-shadow: -1px -1px 10px black;
+  padding-left: 20px;
+  margin-top: 10px;
+  outline: none;
+  /* border-radius: 4px; */
+}
+.requirePera {
+  display: flex;
+  gap: 190px;
+}
+.subbtn {
+  height: 40px;
+  width: 470px;
+  background-color: rgb(230, 89, 38);
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 30px;
+  border-radius: 5px;
+  margin-top: 50px;
+  outline: none;
+}
+.forpera {
+  color: gray;
+}
+.eye-icon {
+  position: absolute;
+  left: 1220px;
+  top: 362px;
+  cursor: pointer;
+}
+.BtnShow input {
+  width: 380px;
+}
+.BtnShow button {
+  width: 65px;
+  border: none;
+  box-shadow: -1px -1px 10px black;
+  outline: none;
+  height: 32px;
+  background: transparent;
+}
